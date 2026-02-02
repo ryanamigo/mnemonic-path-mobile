@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import CircleMenu from './components/circle-menu/index.vue'
+import { Toaster } from 'vue-sonner'
+import 'vue-sonner/style.css'
 </script>
 
 <template>
@@ -10,6 +12,7 @@ import CircleMenu from './components/circle-menu/index.vue'
       </keep-alive>
     </RouterView>
   </main>
+  <Toaster :rich-colors="true" position="top-center" />
   <CircleMenu />
 </template>
 

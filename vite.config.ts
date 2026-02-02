@@ -30,5 +30,12 @@ export default defineConfig({
     port: 1314,
     open: true,
     host: '0.0.0.0',
+    proxy: {
+      '/cf-r2': {
+        target: 'https://mnemonic-path.972cc3cfcfe039ac1a90603659904bf3.r2.cloudflarestorage.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/cf-r2/, ''),
+      },
+    },
   }
 })
