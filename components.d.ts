@@ -11,12 +11,17 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AuthDialog: typeof import('./src/components/auth-dialog/index.vue')['default']
     Child: typeof import('./src/components/child.vue')['default']
     CircleMenu: typeof import('./src/components/circle-menu/index.vue')['default']
     Parent: typeof import('./src/components/parent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     VarButton: typeof import('@varlet/ui')['_ButtonComponent']
+    VarDialog: typeof import('@varlet/ui')['_DialogComponent']
+    VarInput: typeof import('@varlet/ui')['_InputComponent']
     VarSpace: typeof import('@varlet/ui')['_SpaceComponent']
+    VarUpload: typeof import('@varlet/ui')['_UploadComponent']
+    VarUploader: typeof import('@varlet/ui')['_UploaderComponent']
   }
 }
