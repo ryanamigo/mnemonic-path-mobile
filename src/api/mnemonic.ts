@@ -8,3 +8,7 @@ export const getPresigndUrl = (params: { fileName: string }) => {
 export const createMnemonic = (params: CreateMnemonicParams) => {
   return http.post('api/mnemonics', { json: params }).json()
 }
+
+export const deleteMnemonic = (id: string) => {
+  return http.del(`api/mnemonics/${id}`).json()
+}
